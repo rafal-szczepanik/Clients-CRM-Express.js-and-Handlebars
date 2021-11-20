@@ -20,3 +20,11 @@ thead tr, .header-on-left th {
 td, th {
     padding: 6px;
 }
+
+.error {
+    background-color: #f8d5d5;
+    border: 2px solid red;
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+}

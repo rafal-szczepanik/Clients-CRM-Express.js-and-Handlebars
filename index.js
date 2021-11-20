@@ -1,6 +1,7 @@
 const express = require('express');
 const {engine} = require('express-handlebars');
 const methodOverride = require('method-override');
+const {handleError} = require("./utils/errors");
 const {clientRouter} = require("./routers/client");
 const {homeRouter} = require("./routers/home");
 
@@ -19,6 +20,8 @@ app.set('view engine', '.hbs');
 
 app.use('/', homeRouter);
 app.use('/client', clientRouter);
+
+app.use(handleError)
 
 
 app.listen(3000, 'localhost', () => console.log('App is working'));
